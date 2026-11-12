@@ -1,2 +1,2 @@
 # barbarapeikoff.com
-Source of the CloudFlare-hosted fan site of Barbara "Branden" Peikoff. 
+Source of the CloudFlare-hosted fan site of Barbara "Branden" Peikoff.  
