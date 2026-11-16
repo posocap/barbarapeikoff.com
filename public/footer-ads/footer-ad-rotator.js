@@ -21,17 +21,21 @@
     { host: "ainrand.com",       img: "ainrand-com.jpg",        alt: "AI Ayn Rand — an Objectivist knowledge agent, on the record" },
     { host: "nooiq.co",           img: "nooiq-co.jpg",           alt: "nooiq.co", off: true }, // under maintenance: delete ", off: true" to re-enable
     { host: "the-vault.website",  img: "the-vault-website.jpg",  alt: "The Vault — the-vault.website" },
-    { host: "pagepublishing.com", href: "http://www.pagepublishing.com/books/?book=post-socialist-capitalism", img: "book-post-socialist-capitalism.jpg", only: true, alt: "Post-Socialist Capitalism by Ason Peikoff Rand — new book, out now" },
+    { host: "pagepublishing.com", href: "http://www.pagepublishing.com/books/?book=post-socialist-capitalism", img: "book-post-socialist-capitalism.jpg", featured: true, alt: "Post-Socialist Capitalism by Ason Peikoff Rand — new book, out now" },
     { host: "whoneeds.it",        img: "whoneeds-it-com.jpg",    alt: "Who Needs It? — Objectivism quiz at whoneeds.it" }
   ];
 
   var here = location.hostname.replace(/^www\./, "");
-  // An entry with only: true (the book launch) replaces the whole rotation; delete "only: true" to go back to rotating all sites.
-  var only = ADS.filter(function (a) { return a.only && !a.off; });
-  var list = only.length ? only : ADS.filter(function (a) { return !a.off && here !== a.host && !here.endsWith("." + a.host); });
+  // An entry with featured: true (the book launch) is shown every other slot: book, site, book, site...
+  // Delete "featured: true" to go back to a plain rotation.
+  var others = ADS.filter(function (a) { return !a.off && !a.featured && here !== a.host && !here.endsWith("." + a.host); });
+  var feat = ADS.filter(function (a) { return a.featured && !a.off; })[0];
+  var list = others;
+  if (feat) { list = []; others.forEach(function (a) { list.push(feat, a); }); if (!list.length) list = [feat]; }
   if (!list.length) return;
   // random start so every page doesn't open on the same ad
   var i = Math.floor(Math.random() * list.length);
+  if (feat && list[i] !== feat) i = (i + list.length - 1) % list.length;   // open on the book
 
   var box = document.getElementById("footer-ads");
   if (!box) { box = document.createElement("div"); box.id = "footer-ads"; document.body.appendChild(box); }
