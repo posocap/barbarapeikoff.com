@@ -15,7 +15,7 @@
     { host: "asonpeikoff.com",    img: "asonpeikoff-com.jpg",    alt: "Ason Peikoff — data science, AI/ML and writing" },
     { host: "barbarapeikoff.com", img: "barbarapeikoff-com.jpg", alt: "Barbara Peikoff — books, course, film" },
     { host: "postsocialist.com",  img: "postsocialist-com.jpg",  alt: "Post-Socialist Capitalism — Postsocialist Press" },
-    { host: "posocap.com",        img: "posocap-com.jpg",        alt: "Atlas of Objectivism — interactive map" },
+    { host: "posocap.com",        img: "posocap-com.jpg",        alt: "Atlas of Objectivism — interactive map", off: true }, // posocap.com retired: delete ", off: true" to re-enable
     { host: "mycityforum.com",   img: "mycityforum-com.jpg",   alt: "City Forum — chat and encrypted video meetings" },
     { host: "ason.pw",           img: "ason-pw.jpg",            alt: "ason.pw — an isometric room of Ayn Rand posters and Objectivist websites" },
     { host: "ainrand.com",       img: "ainrand-com.jpg",        alt: "AI Ayn Rand — an Objectivist knowledge agent, on the record" },
