@@ -22,6 +22,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Questrial&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .related { margin-top: 0.6rem; font-size: 0.9em; }
+    .related a { margin: 0 0.35rem; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://barbarapeikoff.com/#website",
+        "name": "Barbara Peikoff",
+        "url": "https://barbarapeikoff.com/",
+        "about": { "@id": "https://barbarapeikoff.com/#barbara" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://barbarapeikoff.com/#barbara",
+        "name": "Barbara Branden",
+        "alternateName": "Barbara Peikoff",
+        "jobTitle": "Writer, lecturer and editor",
+        "image": "https://barbarapeikoff.com/photo-barbara-enlarged.jpg",
+        "alumniOf": "New York University",
+        "knowsAbout": ["Ayn Rand", "Objectivism", "Efficient thinking"],
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Barbara_Branden",
+          "https://barbarabranden.com/"
+        ]
+      },
+      {
+        "@type": "Book",
+        "name": "The Passion of Ayn Rand",
+        "author": { "@id": "https://barbarapeikoff.com/#barbara" },
+        "publisher": "Doubleday",
+        "datePublished": "1986",
+        "genre": "Biography",
+        "about": { "@type": "Person", "name": "Ayn Rand", "sameAs": "https://en.wikipedia.org/wiki/Ayn_Rand" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -110,7 +151,9 @@
   </main>
 
   <footer>
-    <div class="wrap">&copy; Barbara Peikoff</div>
+    <div class="wrap">&copy; Barbara Peikoff
+      <p class="related">Related: <a href="https://peikoff.net/peikoffs">The Peikoffs</a> <a href="https://atlas.peikoff.net/">Atlas of Objectivism</a> <a href="https://whoneeds.it/">Objectivism quiz</a> <a href="https://asonpeikoff.com/">Ason Peikoff</a></p>
+    </div>
   </footer>
 
 <!-- Footer ads: cross-promotion banners (rotate every 5s) -->
