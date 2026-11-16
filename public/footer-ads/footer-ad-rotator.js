@@ -21,6 +21,7 @@
     { host: "ainrand.com",       img: "ainrand-com.jpg",        alt: "AI Ayn Rand — an Objectivist knowledge agent, on the record" },
     { host: "nooiq.co",           img: "nooiq-co.jpg",           alt: "nooiq.co", off: true }, // under maintenance: delete ", off: true" to re-enable
     { host: "the-vault.website",  img: "the-vault-website.jpg",  alt: "The Vault — the-vault.website" },
+    { host: "pagepublishing.com", href: "http://www.pagepublishing.com/books/?book=post-socialist-capitalism", img: "book-post-socialist-capitalism.jpg", alt: "Post-Socialist Capitalism by Ason Peikoff Rand — new book, out now" },
     { host: "whoneeds.it",        img: "whoneeds-it-com.jpg",    alt: "Who Needs It? — Objectivism quiz at whoneeds.it" }
   ];
 
@@ -43,7 +44,7 @@
 
   var links = list.map(function (a, n) {
     var l = document.createElement("a");
-    l.href = "https://" + a.host + "/?ref=" + encodeURIComponent(here);
+    l.href = a.href || ("https://" + a.host + "/?ref=" + encodeURIComponent(here));
     l.target = "_blank"; l.rel = "noopener";
     l.style.cssText = "position:absolute;inset:0;opacity:0;transition:opacity " + FADE_MS + "ms ease;pointer-events:none;";
     var im = document.createElement("img");
