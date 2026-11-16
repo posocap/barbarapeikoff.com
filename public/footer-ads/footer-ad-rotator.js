@@ -21,7 +21,7 @@
     { host: "ainrand.com",       img: "ainrand-com.jpg",        alt: "AI Ayn Rand — an Objectivist knowledge agent, on the record" },
     { host: "nooiq.co",           img: "nooiq-co.jpg",           alt: "nooiq.co", off: true }, // under maintenance: delete ", off: true" to re-enable
     { host: "the-vault.website",  img: "the-vault-website.jpg",  alt: "The Vault — the-vault.website" },
-    { host: "whoneeds.it.com",    img: "whoneeds-it-com.jpg",    alt: "Who Needs It — whoneeds.it.com" }
+    { host: "whoneeds.it",        img: "whoneeds-it-com.jpg",    alt: "Who Needs It? — Objectivism quiz at whoneeds.it" }
   ];
 
   var here = location.hostname.replace(/^www\./, "");
